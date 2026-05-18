@@ -3,11 +3,121 @@
 
 using namespace std;
 
+enum Color
+{
+	Black = 0, Blue = 1, Green = 2, Cyan = 3, Red = 4, Magenta = 5, Brown = 6, LightGray = 7, DarkGray = 8,
+	LightBlue = 9, LightGreen = 10, LightCyan = 11, LightRed = 12, LightMagenta = 13, Yellow = 14, White = 15
+};
+
+void SetColor(int text, int background)
+{
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (WORD)((background << 4) | text));
+}
+
 int main()
 {
 	SetConsoleCP(65001); 
 	SetConsoleOutputCP(65001);
 	cout.setf(ios::boolalpha);
+	SetColor(White, Blue);
+	system("cls");
+
+	/// 18.05.2026
+
+
+
+	SetColor(LightRed, Blue);
+	cout << "klaj fejwerf" << endl;
+
+	SetColor(White, Blue);
+
+
+
+
+	//int a, b, c;
+	//cin >> a >> b >> c;
+
+	//if (a % 2 == 0)
+	//{
+	//	cout << "a is even" << endl;
+	//}
+	//else
+	//{
+	//	cout << "a is odd" << endl;
+	//}
+
+	// 3 1 2
+	//if (a > b && a > c)
+	//{
+	//	cout << a << endl;
+	//}
+	//else if (b > c)
+	//{
+	//	cout << b << endl;
+	//}
+	//else
+	//{
+	//	cout << c << endl;
+	//}
+
+	// 2+3
+
+	//float a, b;
+	//char op;
+	//cin >> a >> op >> b;
+
+	//switch (op)
+	//{
+	//case '+': cout << a + b << endl; break;
+	//case '-': cout << a - b << endl; break;
+	//case '*': cout << a * b << endl; break;
+	//case '/': cout << a / b << endl; break;
+	//default: 
+	//	cout << "Error. Use correct symbol (+, -, *, /)" << endl;
+	//	break;	
+	//}
+
+	//if (op == '+')
+	//{
+	//	cout << a + b << endl;
+	//}
+	//else if (op == '-')
+	//{
+	//	cout << a - b << endl;
+	//}
+	//else if (op == '*')
+	//{
+	//	cout << a * b << endl;
+	//}
+	//else if (op == '/')
+	//{
+	//	cout << a / b << endl;
+	//}
+	//else
+	//{
+	//	cout << "Error. Use correct symbol (+, -, *, /)" << endl;
+	//}
+
+
+	//int m;
+	//cin >> m;
+	//switch (m) {
+	//case 1: case 2: case 12: cout << "Winter"; break;
+	//case 3: case 4:	case 5:  cout << "Spring"; break;
+
+	//case 6: cout << "Summer"; break;
+	//case 7: cout << "Summer"; break;
+	//case 8: cout << "Summer"; break;
+
+	//case 9: cout << "Autumn"; break;
+	//case 10: cout << "Autumn"; break;
+	//case 11: cout << "Autumn"; break;
+	//default: cout << "Error" << endl;
+	//}
+	//return 0;
+
+
+
 
 
 	//cout << "Hello \\World\\!\n" << endl;
@@ -77,9 +187,9 @@ int main()
 	//float c = (a + b) / 2.f;
 	//cout << "Середнє арифметичне: " << c << endl;
 
-	cout << pow(2.2, 3.258) << endl;;
+	//cout << pow(2.2, 3.258) << endl;;
 
-	printf("Hello %d World!\n", 5);
+	//printf("Hello %d World!\n", 5);
 
 	return 0;
 }
