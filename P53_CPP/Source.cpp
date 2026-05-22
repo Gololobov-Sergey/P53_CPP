@@ -1,5 +1,6 @@
 #include<iostream>
 #include<Windows.h>
+#include<iomanip>
 
 using namespace std;
 
@@ -19,18 +20,95 @@ int main()
 	SetConsoleCP(65001); 
 	SetConsoleOutputCP(65001);
 	cout.setf(ios::boolalpha);
-	SetColor(White, Blue);
+	SetColor(Black, White);
 	system("cls");
+
+	//typedef unsigned char Pupsik;
+	//Pupsik t;
+
+
+	/// 22.05.2026
+
+	//Дано  — цена 1 кг конфет.Вывести стоимость 0.1,
+	//	0.2, ..., 1 кг конфет.
+
+
+
+	//Дано вещественное число A и целое число N(> 0).Используя один
+	//	цикл, вывести все целые степени числа A от 1 до N.
+
+
+	//float a, res;
+	//cin >> a;
+	//res = a;
+
+	//int n = 10;
+	//for (size_t i = 0; i < n; i++)
+	//{
+	//	cout << res << endl;
+	//	res *= a;
+	//}
+	cout << "---- 1 ----" << endl;
+	SetColor(White, Black);
+	cout << " Mo Tu We TH Fr";
+	SetColor(White, LightRed);
+	cout << " Sa Su" << endl;
+	SetColor(Black, White);
+	int k = 3;
+	for (int d = 1 - k; d <= 31; d++)
+	{
+		if (d <= 0)
+			cout << "   ";
+		else
+		{
+			SetColor(((d + k) % 7 == 6 || (d + k) % 7 == 0) ? LightRed : Black, White);
+			cout << setw(3) << d;
+			if ((d + k) % 7 == 0)
+				cout << endl;
+		}
+	}
+
+
+
+	//while (5)
+	//{
+
+	//}
+
+	//for (size_t i = 1; i <= 10; i++)
+	//	cout << i << endl;
+	//
+
+	//int i = 1;
+	//while (i <= 10)
+	//	cout << i++ << endl;
+	//
+
+	//do
+	//{
+
+	//} while (true);
+
 
 	/// 18.05.2026
 
+	//(condition) ? oper1 : oper2;
 
+	//int a = 5, b = 4,c = 3, max;
+	//if (a > b)
+	//{
+	//	max = a;
+	//}
+	//else
+	//{
+	//	max = b;
+	//}
 
-	SetColor(LightRed, Blue);
-	cout << "klaj fejwerf" << endl;
+	//(a > b) ? max = a : max = b;
 
-	SetColor(White, Blue);
+	//max = (a > b) ? a : b;
 
+	//max = (a > b && a > c) ? a : (b > c) ? b : c;
 
 
 
