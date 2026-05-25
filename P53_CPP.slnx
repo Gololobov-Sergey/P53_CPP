@@ -1,7 +1,9 @@
 <Solution>
   <Configurations>
+    <Platform Name="Any CPU" />
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Project Path="FirstApp/FirstApp.vcxproj" Id="482d79c4-0796-4072-a4a1-c5663e677cfd" />
   <Project Path="P53_CPP/P53_CPP.vcxproj" Id="a8d555c6-a558-479b-ac04-464cddedf0a8" />
 </Solution>

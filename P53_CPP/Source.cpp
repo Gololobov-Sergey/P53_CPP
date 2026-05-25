@@ -20,8 +20,28 @@ int main()
 	SetConsoleCP(65001); 
 	SetConsoleOutputCP(65001);
 	cout.setf(ios::boolalpha);
-	SetColor(Black, White);
+	SetColor(White, LightBlue);
 	system("cls");
+
+	srand(time(0));
+
+	/// 25.05.2026
+
+	//int a, sum = 0;
+	//do
+	//{
+	//	cin >> a; 
+	//	sum += a;
+	//} while (a != 0);
+	//cout << sum << endl;
+
+	for (size_t i = 0; i < 10; i++)
+	{
+		cout << rand() % 10 + 10 << endl;
+	}
+	
+
+
 
 	//typedef unsigned char Pupsik;
 	//Pupsik t;
@@ -48,25 +68,25 @@ int main()
 	//	cout << res << endl;
 	//	res *= a;
 	//}
-	cout << "---- 1 ----" << endl;
-	SetColor(White, Black);
-	cout << " Mo Tu We TH Fr";
-	SetColor(White, LightRed);
-	cout << " Sa Su" << endl;
-	SetColor(Black, White);
-	int k = 3;
-	for (int d = 1 - k; d <= 31; d++)
-	{
-		if (d <= 0)
-			cout << "   ";
-		else
-		{
-			SetColor(((d + k) % 7 == 6 || (d + k) % 7 == 0) ? LightRed : Black, White);
-			cout << setw(3) << d;
-			if ((d + k) % 7 == 0)
-				cout << endl;
-		}
-	}
+	//cout << "---- 1 ----" << endl;
+	//SetColor(White, Black);
+	//cout << " Mo Tu We TH Fr";
+	//SetColor(White, LightRed);
+	//cout << " Sa Su" << endl;
+	//SetColor(Black, White);
+	//int k = 3;
+	//for (int d = 1 - k; d <= 31; d++)
+	//{
+	//	if (d <= 0)
+	//		cout << "   ";
+	//	else
+	//	{
+	//		SetColor(((d + k) % 7 == 6 || (d + k) % 7 == 0) ? LightRed : Black, White);
+	//		cout << setw(3) << d;
+	//		if ((d + k) % 7 == 0)
+	//			cout << endl;
+	//	}
+	//}
 
 
 
