@@ -17,13 +17,129 @@ void SetColor(int text, int background)
 
 int main()
 {
-	SetConsoleCP(65001); 
+	SetConsoleCP(65001);
 	SetConsoleOutputCP(65001);
 	cout.setf(ios::boolalpha);
 	SetColor(White, LightBlue);
 	system("cls");
 
 	srand(time(0));
+
+
+	/// 29.05.2026
+
+	const int size = 10;
+
+	int a[size]; // = {}; // = { 1,2,3,4,5 };
+
+	//int count = 0;
+	int min = 0, max = 10;
+	for (size_t i = 0; i < size; i++)
+	{
+		a[i] = rand() % (max - min + 1) + min;
+		//cin >> a[i];
+	}
+
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << a[i] << " ";
+	}
+	cout << endl;
+
+
+	for (size_t i = 0; i < size - 1; i++)
+	{
+		for (size_t j = 0; j < size - 1 - i; j++)
+		{
+			if (a[j] > a[j + 1])
+			{
+				swap(a[i], a[i + 1]);
+			}
+		}
+	}
+
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << a[i] << " ";
+	}
+	cout << endl;
+
+	//for (size_t i = 0; i < size / 2; i++)
+	//{
+	//	int t = a[i];
+	//	a[i] = a[size - 1 - i];
+	//	a[size - 1 - i] = t;
+	//}
+	//cout << endl;
+
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << a[i] << " ";
+	}
+	cout << endl;
+
+
+	//for (int i = size - 1; i >= 0; i--)
+	//{
+	//	cout << a[i] << " ";
+	//}
+	//cout << endl;
+
+	//int t = a[0];
+	//a[0] = a[size - 1];
+	//a[size - 1] = t;
+
+	//for (size_t i = 0; i < size; i++)
+	//{
+	//	cout << a[i] << " ";
+	//}
+	//cout << endl;
+
+	//int maxValue = a[0];
+	//int index = 0;
+	//for (size_t i = 1; i < size; i++)
+	//{
+	//	if (a[i] >= maxValue) 
+	//	{
+	//		maxValue = a[i];
+	//		index = i;
+	//	}
+	//}
+	//cout << maxValue << endl;
+	//cout << index << endl;
+
+
+	//int b[size];
+	//int j = 0;
+	//for (size_t i = 0; i < size; i++)
+	//{
+	//	if (a[i] % 2 == 0) 
+	//	{
+	//		b[j++] = a[i];
+	//	}
+	//}
+
+	//for (size_t i = 0; i < j; i++)
+	//{
+	//	cout << b[i] << " ";
+	//}
+	//cout << endl;
+
+
+
+
+
+
+
+	//for (size_t i = 0; i < size; i++)
+	//{
+	//	if (a[i] % 2 == 0)
+	//	{
+	//		count++;
+	//	}
+	//}
+	//cout << count << endl;
+
 
 	/// 25.05.2026
 
@@ -35,11 +151,11 @@ int main()
 	//} while (a != 0);
 	//cout << sum << endl;
 
-	for (size_t i = 0; i < 10; i++)
-	{
-		cout << rand() % 10 + 10 << endl;
-	}
-	
+	//for (size_t i = 0; i < 10; i++)
+	//{
+	//	cout << rand() % 10 + 10 << endl;
+	//}
+
 
 
 
