@@ -20,49 +20,166 @@ int main()
 	SetConsoleCP(65001);
 	SetConsoleOutputCP(65001);
 	cout.setf(ios::boolalpha);
-	SetColor(White, LightBlue);
+	SetColor(White, Black);
 	system("cls");
 
 	srand(time(0));
 
 
-	/// 29.05.2026
+	/// 01.06.2026
 
-	const int size = 10;
+	int min = 1, max = 100;
+	const int row = 5, col = 5;
+	int a[row][col];
 
-	int a[size]; // = {}; // = { 1,2,3,4,5 };
+	//for (size_t i = 0; i < row; i++)
+	//{
+	//	for (size_t j = 0; j < col; j++)
+	//	{
+	//		a[i][j] = rand() % (max - min + 1) + min;
+	//	}
+	//}
 
-	//int count = 0;
-	int min = 0, max = 10;
-	for (size_t i = 0; i < size; i++)
+	for (size_t i = 0; i < row; i++)
 	{
-		a[i] = rand() % (max - min + 1) + min;
-		//cin >> a[i];
-	}
-
-	for (size_t i = 0; i < size; i++)
-	{
-		cout << a[i] << " ";
-	}
-	cout << endl;
-
-
-	for (size_t i = 0; i < size - 1; i++)
-	{
-		for (size_t j = 0; j < size - 1 - i; j++)
+		for (size_t j = 0; j < col; j++)
 		{
-			if (a[j] > a[j + 1])
+			bool flag = false;
+			while (!flag)
 			{
-				swap(a[i], a[i + 1]);
+				int r = rand() % (max - min + 1) + min;
+				for (size_t k = 0; k < row; k++)
+				{
+					for (size_t m = 0; m < col; m++)
+					{
+						if (a[k][m] == r)
+						{
+							flag = true;
+						}
+					}
+				}
+				if (!flag)
+				{
+					a[i][j] = r;
+					break;
+				}
+				flag = false;
 			}
 		}
 	}
 
-	for (size_t i = 0; i < size; i++)
+
+
+	for (size_t i = 0; i < row; i++)
 	{
-		cout << a[i] << " ";
+		for (size_t j = 0; j < col; j++)
+		{
+			cout << setw(4) << a[i][j];
+		}
+		cout << endl;
 	}
-	cout << endl;
+
+
+	//int maxV = a[0][0];
+	//int minV = a[0][0];
+	//int iMin = 0, iMax = 0, jMin = 0, jMax = 0;
+	//for (size_t i = 0; i < row; i++)
+	//{
+	//	for (size_t j = 0; j < col; j++)
+	//	{
+	//		if (a[i][j] > maxV)
+	//		{
+	//			maxV = a[i][j];
+	//			iMax = i;
+	//			jMax = j;
+	//		}
+	//		if (a[i][j] < minV)
+	//		{
+	//			minV = a[i][j];
+	//			iMin = i;
+	//			jMin = j;
+	//		}
+	//	}
+	//}
+
+
+	//int s = 0;
+	//for (size_t i = iMin; i <= iMax; i++)
+	//{
+	//	for (size_t j = 0; j < col; j++)
+	//	{
+	//		if (i == iMin && j > jMin || i == iMax && j < jMax || i > iMin && i < iMax)
+	//		{
+	//			s += a[i][j];
+	//		}
+	//	}
+	//}
+
+	//cout << s << endl;
+
+
+	//for (size_t i = 0; i < row; i++)
+	//{
+	//	for (size_t j = 0; j < col; j++)
+	//	{
+	//		//if (a[i][j] == maxV)
+	//		//{
+	//		//	SetColor(Red, Black);
+	//		//}
+	//		//else if (a[i][j] == minV)
+	//		//{
+	//		//	SetColor(Green, Black);
+	//		//}
+	//		//else
+	//		//{
+	//		//	SetColor(White, Black);
+	//		//}
+
+	//		SetColor((a[i][j] == maxV) ? Red : (a[i][j] == minV) ? Green : White, Black);
+
+	//		cout << a[i][j] << " ";
+	//	}
+	//	cout << endl;
+	//}
+
+
+	/// 29.05.2026
+
+	//const int size = 10;
+
+	//int a[size]; // = {}; // = { 1,2,3,4,5 };
+
+	////int count = 0;
+	//int min = 0, max = 10;
+	//for (size_t i = 0; i < size; i++)
+	//{
+	//	a[i] = rand() % (max - min + 1) + min;
+	//	//cin >> a[i];
+	//}
+
+	//for (size_t i = 0; i < size; i++)
+	//{
+	//	cout << a[i] << " ";
+	//}
+	//cout << endl;
+
+
+	//for (size_t i = 0; i < size - 1; i++)
+	//{
+	//	for (size_t j = 0; j < size - 1 - i; j++)
+	//	{
+	//		if (a[j] > a[j + 1])
+	//		{
+	//			swap(a[i], a[i + 1]);
+	//		}
+	//	}
+	//}
+
+	//for (size_t i = 0; i < size; i++)
+	//{
+	//	cout << a[i] << " ";
+	//}
+	//cout << endl;
 
 	//for (size_t i = 0; i < size / 2; i++)
 	//{
@@ -72,11 +189,11 @@ int main()
 	//}
 	//cout << endl;
 
-	for (size_t i = 0; i < size; i++)
-	{
-		cout << a[i] << " ";
-	}
-	cout << endl;
+	//for (size_t i = 0; i < size; i++)
+	//{
+	//	cout << a[i] << " ";
+	//}
+	//cout << endl;
 
 
 	//for (int i = size - 1; i >= 0; i--)
