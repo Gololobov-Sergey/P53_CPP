@@ -2,18 +2,9 @@
 #include<Windows.h>
 #include<iomanip>
 
+#include"myFunc.h"
+
 using namespace std;
-
-enum Color
-{
-	Black = 0, Blue = 1, Green = 2, Cyan = 3, Red = 4, Magenta = 5, Brown = 6, LightGray = 7, DarkGray = 8,
-	LightBlue = 9, LightGreen = 10, LightCyan = 11, LightRed = 12, LightMagenta = 13, Yellow = 14, White = 15
-};
-
-void SetColor(int text, int background)
-{
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (WORD)((background << 4) | text));
-}
 
 int main()
 {
@@ -25,12 +16,42 @@ int main()
 
 	srand(time(0));
 
+	/// 05.06.2026
+
+	// arr[..][..][metagalaxy][galaxy][system][planet][continent][country][city][street][house][number]
+
+	starLine();
+	starLine(30);
+	starLine(20, '#');
+
+
+	//cout << avg3(3, 4, 6) << endl;
+
+	//size array
+	const int size = 20;
+	int arr[size];
+	setArray(arr, size);
+	printArray(arr, size);
+	//bublleSort(arr, size);
+	//printArray(arr, size);
+	cout << findArray(arr, size, 110) << endl;
+
+	int ind;
+
+	cout << ind << endl;
+	cout << arr[ind] << endl;
+
+	int max;
+
+
+	//f(1010101);
+	//ff(87) // 100011101
 
 	/// 01.06.2026
 
-	int min = 1, max = 100;
-	const int row = 5, col = 5;
-	int a[row][col];
+	//int min = 1, max = 100;
+	//const int row = 5, col = 5;
+	//int a[row][col];
 
 	//for (size_t i = 0; i < row; i++)
 	//{
@@ -40,44 +61,44 @@ int main()
 	//	}
 	//}
 
-	for (size_t i = 0; i < row; i++)
-	{
-		for (size_t j = 0; j < col; j++)
-		{
-			bool flag = false;
-			while (!flag)
-			{
-				int r = rand() % (max - min + 1) + min;
-				for (size_t k = 0; k < row; k++)
-				{
-					for (size_t m = 0; m < col; m++)
-					{
-						if (a[k][m] == r)
-						{
-							flag = true;
-						}
-					}
-				}
-				if (!flag)
-				{
-					a[i][j] = r;
-					break;
-				}
-				flag = false;
-			}
-		}
-	}
+	//for (size_t i = 0; i < row; i++)
+	//{
+	//	for (size_t j = 0; j < col; j++)
+	//	{
+	//		bool flag = false;
+	//		while (!flag)
+	//		{
+	//			int r = rand() % (max - min + 1) + min;
+	//			for (size_t k = 0; k < row; k++)
+	//			{
+	//				for (size_t m = 0; m < col; m++)
+	//				{
+	//					if (a[k][m] == r)
+	//					{
+	//						flag = true;
+	//					}
+	//				}
+	//			}
+	//			if (!flag)
+	//			{
+	//				a[i][j] = r;
+	//				break;
+	//			}
+	//			flag = false;
+	//		}
+	//	}
+	//}
 
 
 
-	for (size_t i = 0; i < row; i++)
-	{
-		for (size_t j = 0; j < col; j++)
-		{
-			cout << setw(4) << a[i][j];
-		}
-		cout << endl;
-	}
+	//for (size_t i = 0; i < row; i++)
+	//{
+	//	for (size_t j = 0; j < col; j++)
+	//	{
+	//		cout << setw(4) << a[i][j];
+	//	}
+	//	cout << endl;
+	//}
 
 
 	//int maxV = a[0][0];
