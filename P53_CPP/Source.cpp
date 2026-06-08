@@ -16,32 +16,64 @@ int main()
 
 	srand(time(0));
 
+
+	/// 08.06.2026
+
+
+	//rec();
+
+
+	const int size = 10;
+	float arr[size];
+	setArray<float>(arr, size);
+	printArray(arr, size);
+	//cout << maxValueArray(arr, size) << endl;
+
+	fff<int>();
+
+	//cout << Sum(3, 5.5) << endl;
+	//cout << Sum(3.5, 5) << endl;
+	//cout << Sum(3.5, 5.5) << endl;
+	//cout << Sum(3, 'a', 2.5) << endl;
+
+	//auto a = 10 + 3.5;
+
+	//int c = 9;
+
+	//a = 3.5;
+
+	//decltype(a + c) b;
+
+	//auto m = 'c';
+
+
+
 	/// 05.06.2026
 
 	// arr[..][..][metagalaxy][galaxy][system][planet][continent][country][city][street][house][number]
 
-	starLine();
-	starLine(30);
-	starLine(20, '#');
+	//starLine();
+	//starLine(30);
+	//starLine(20, '#');
 
 
-	//cout << avg3(3, 4, 6) << endl;
+	////cout << avg3(3, 4, 6) << endl;
 
-	//size array
-	const int size = 20;
-	int arr[size];
-	setArray(arr, size);
-	printArray(arr, size);
-	//bublleSort(arr, size);
+	////size array
+	//const int size = 20;
+	//int arr[size];
+	//setArray(arr, size);
 	//printArray(arr, size);
-	cout << findArray(arr, size, 110) << endl;
+	////bublleSort(arr, size);
+	////printArray(arr, size);
+	//cout << findArray(arr, size, 110) << endl;
 
-	int ind;
+	//int ind;
 
-	cout << ind << endl;
-	cout << arr[ind] << endl;
+	//cout << ind << endl;
+	//cout << arr[ind] << endl;
 
-	int max;
+	//int max;
 
 
 	//f(1010101);
