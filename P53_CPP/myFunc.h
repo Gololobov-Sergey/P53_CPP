@@ -48,7 +48,7 @@ void printArray(T arr[], int size)
 }
 
 template<class T>
-void setArray(T arr[], int size, T minValue = 0, T maxValue = 9)
+void setArray(T* arr, int size, T minValue = 0, T maxValue = 9)
 {
 	cout << "template setArray" << endl;
 	for (size_t i = 0; i < size; i++)
@@ -138,14 +138,21 @@ void rec()
 	rec();
 }
 
-void printArray2D(int arr[10][10], int row, int col)
+void inc(int* a)
 {
-
+	++(*a);
 }
 
 template<class T>
-T fff()
+T* addValueArray(T* arr, int* size, T value)
 {
-	T a = 9;
-	//
+	T* temp = new T[*size + 1];
+	for (size_t i = 0; i < *size; i++)
+	{
+		temp[i] = arr[i];
+	}
+	temp[*size] = value;
+	delete[] arr;
+	(*size)++;
+	return temp;
 }
