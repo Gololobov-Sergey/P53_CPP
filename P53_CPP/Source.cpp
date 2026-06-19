@@ -17,6 +17,94 @@ int main()
 	srand(time(0));
 
 
+	/// 19.06.2026
+
+	//int a = 5;
+	//const int* pa = &a;
+	//*pa = 99; non
+	//int b = 77;
+	//pa = &b;
+
+	//int* const pa = &a;
+	//*pa = 555;
+	//pa = &b; non
+
+	//const int* const pa = &a;
+
+	//const int& rb = b;
+	//rb = 99;
+
+
+	//int a = 5;     int b = 8;
+	//int* pa = &a;  int& rb = b;
+	//*pa = 99;      rb = 88;
+
+	//pa = &b;       rb = a;
+
+	//inc(a);
+
+	//char a = 8;
+	//char* pa = &a;
+	//cout << sizeof(pa) << endl;
+
+
+	int size;
+	cin >> size;
+	int* p = new int[size];
+	setArray(p, size);
+	printArray(p);
+
+
+	double d = 5.5;
+	double* pd = &d;
+
+	void* pv = p;
+	pv = pd;
+	*((double*)pv) = 5.6;
+
+
+
+	//int* res = SumProdArray(p, size);
+
+	//cout << res[0] << endl;
+
+
+	
+
+	int M_1, N_1;
+
+	cout << "M: ";
+	cin >> M_1;
+	int* A = new int[M_1];
+	setArray(A, M_1);
+	SetColor(Blue, Black);
+	cout << "A: ";
+	printArray(A, M_1);
+	SetColor(White, Black);
+
+	cout << "N: ";
+	cin >> N_1;
+	int* B = new int[N_1];
+	setArray(B, N_1);
+	SetColor(Red, Black);
+	cout << "B: ";
+	printArray(B, N_1);
+
+	int* C = nullptr;
+	int C_1 = 0;
+
+	for (size_t i = 0; i < M_1; i++)
+	{
+		if (findArray(B, N_1, A[i]) == -1 && findArray(C, C_1, A[i]) == -1)
+		{
+			addValueArray(C, C_1, A[i]);
+			findArray(B, M_1, A[i]);
+		}
+	}
+
+	//SetColor(Green, Black);
+	//printArray(C, C_1);
+
 	/// 15.06.2026
 
 	//int a = 5;
@@ -70,25 +158,25 @@ int main()
 
 
 	//int arr[] = { 1,2,32,4 };
-	
+
 	//for (int* i = arr; i  != arr+4; i++)
 	//{
 	//	cout << *i << " ";
 	//}
 
-	int size;
-	cin >> size;
-	float* p = new float[size];
-	setArray(p, size);
-	printArray(p, size);
+	//int size;
+	//cin >> size;
+	//int* p = new int[size];
+	//setArray(p, size);
+	//printArray(p, size);
 
-	p = addValueArray(p, &size, 999.f);
+	//p = addValueArray(p, &size, 999.f);
 
-	printArray(p, size);
+	//printArray(p, size);
 
-	p = delValueArray(p, &size);
+	//p = delValueArray(p, &size);
 
-	printArray(p, size);
+	//printArray(p, size);
 
 	//
 	//int* temp = new int[size + 1];
@@ -105,7 +193,7 @@ int main()
 
 	//delete[] p;
 
-	
+
 
 	//int a = 5;
 	//inc(&a);

@@ -50,7 +50,7 @@ void printArray(T arr[], int size)
 template<class T>
 void setArray(T* arr, int size, T minValue = 0, T maxValue = 9)
 {
-	cout << "template setArray" << endl;
+	//cout << "template setArray" << endl;
 	for (size_t i = 0; i < size; i++)
 	{
 		arr[i] = T();
@@ -61,7 +61,7 @@ void setArray(T* arr, int size, T minValue = 0, T maxValue = 9)
 
 void setArray(int arr[], int size, int minValue = 0, int maxValue = 9)
 {
-	cout << "int setArray" << endl;
+	//cout << "int setArray" << endl;
 	for (size_t i = 0; i < size; i++)
 	{
 		arr[i] = rand() % (maxValue - minValue + 1) + minValue;
@@ -83,7 +83,7 @@ void bublleSort(T arr[], int size)
 }
 
 template<class T>
-int findArray(T arr[], int size, T key)
+int findArray(T arr[], int size, const T& key)
 {
 	for (size_t i = 0; i < size; i++)
 	{
@@ -111,7 +111,7 @@ T maxValueArray(T arr[], int size)
 }
 
 template<class T>
-int countValueArray(T arr[], int size, T key)
+int countValueArray(T* arr, int size, const T& key)
 {
 	int count = 0;
 	for (size_t i = 0; i < size; i++)
@@ -138,21 +138,45 @@ void rec()
 	rec();
 }
 
-void inc(int* a)
+void inc(int& a)
 {
-	++(*a);
+	++a;
 }
 
 template<class T>
-T* addValueArray(T* arr, int* size, T value)
+void addValueArray(T*& arr, int& size, T value)
 {
-	T* temp = new T[*size + 1];
-	for (size_t i = 0; i < *size; i++)
+	T* temp = new T[size + 1];
+	for (size_t i = 0; i < size; i++)
 	{
 		temp[i] = arr[i];
 	}
-	temp[*size] = value;
+	temp[size] = value;
 	delete[] arr;
-	(*size)++;
-	return temp;
+	size++;
+	arr = temp;
+}
+
+int* SumProdArray(int* arr, int size)
+{
+	int* res = new int[2] {0, 1};
+	
+	for (size_t i = 0; i < size; i++)
+	{
+		res[0] += arr[i];
+		res[1] *= arr[i];
+	}
+
+	return res;
+}
+
+void printArray(int* arr)
+{
+	int block = _msize(arr);
+	int size = block / sizeof(int);
+	for (size_t i = 0; i < size; i++)
+	{
+		cout << arr[i] << " ";
+	}
+	cout << endl;
 }
