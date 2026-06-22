@@ -67,16 +67,26 @@ void setArray(int arr[], int size, int minValue = 0, int maxValue = 9)
 		arr[i] = rand() % (maxValue - minValue + 1) + minValue;
 	}
 }
-
+template<class T>
+bool asc(const T& a, const T& b)
+{
+	return a > b;
+}
 
 template<class T>
-void bublleSort(T arr[], int size)
+bool desc(const T& a, const T& b)
+{
+	return a < b;
+}
+
+template<class T>
+void bublleSort(T arr[], int size, bool(*method)(const T&, const T&) = asc)
 {
 	for (size_t i = 0; i < size - 1; i++)
 	{
 		for (size_t j = 0; j < size - 1 - i; j++)
 		{
-			if (arr[j] > arr[j + 1])
+			if (method(arr[j], arr[j + 1]))
 				swap(arr[j], arr[j + 1]);
 		}
 	}
@@ -179,4 +189,74 @@ void printArray(int* arr)
 		cout << arr[i] << " ";
 	}
 	cout << endl;
+}
+
+template<class T>
+void forEach(T* arr, int size, void(*func)(T&))
+{
+	for (size_t i = 0; i < size; i++)
+	{
+		func(arr[i]);
+	}
+}
+
+
+void kopatel1()
+{
+	//
+	cout << "Копає один робітник з лопатою" << endl;
+}
+
+
+void kopatel3()
+{
+	cout << "Копають три робітника з лопатами і кірками" << endl;
+}
+
+void exkavator()
+{
+	cout << "Копає екскаватор, робітники курять в сторонці.. ))" << endl;
+}
+
+void(*prorab(int len))()
+{
+	if (len <= 100)
+	{
+		return kopatel1;
+	}
+	else if (len <= 500)
+	{
+		return kopatel3;
+	}
+	else
+	{
+		return exkavator;
+	}
+}
+
+
+void pistol(int* bullets)
+{
+	cout << "->" << endl;
+	bullets[0]--;
+}
+
+void gun(int* bullets)
+{
+	cout << "-> -> -> -> -> " << endl;
+	bullets[1] -= 5;
+}
+
+void arrow(int* bullets)
+{
+	cout << ">>----->" << endl;
+	bullets[2] -= 1;
+}
+
+
+void(*selectWeapon(int* bullets))(int*)
+{
+	void(*weapons[])(int*) = { pistol, gun, arrow };
+
+	return weapons[findArray(bullets, 3, maxValueArray(bullets, 3))];
 }

@@ -1,10 +1,36 @@
 #include<iostream>
 #include<Windows.h>
 #include<iomanip>
+#include<conio.h>
 
 #include"myFunc.h"
 
 using namespace std;
+
+void hello()
+{
+	cout << "Hello" << endl;
+}
+
+void goodbye()
+{
+	cout << "Goodbye" << endl;
+}
+
+void mult10(int& a)
+{
+	a *= 10;
+}
+
+void print(int& a)
+{
+	cout << a << " ";
+}
+
+int sum(int a, int b)
+{
+	return a + b;
+}
 
 int main()
 {
@@ -16,6 +42,81 @@ int main()
 
 	srand(time(0));
 
+
+	/// 22.06.2026
+
+	int a, b, op;
+	int(*operation[])(int, int) = {sum};
+	cin >> a >> b;
+	cout << "1 +, 2 -, 3 *, 4 /" << endl;
+	cin >> op;
+	cout << operation[op - 1](a, b) << endl;
+
+
+
+
+
+	//int len = 3400;
+	//void(*director)() = prorab(len);
+	//director();
+
+
+
+	//int bullets[] = { 50, 50, 50 };
+	//void(*shoot)(int*);
+	//while (true)
+	//{
+	//	if (_kbhit())
+	//	{
+	//		int c = _getch();
+	//		switch (c)
+	//		{
+	//		case ' ':
+	//			shoot = selectWeapon(bullets);
+	//			shoot(bullets);
+	//			break;
+	//		case 'a':
+	//			arrow(bullets);
+	//			break;
+	//		default:
+	//			break;
+	//		}
+	//	}
+	//}
+
+	 
+
+	//int size = 10;
+	////cin >> size;
+	//int* p = new int[size];
+	//setArray(p, size);
+	//printArray(p);
+	//bublleSort(p, size, desc);
+	//
+	//forEach(p, size, print);
+	//
+	//printArray(p);
+
+
+
+	// type (*name) (param)
+
+	//void(*message)() = hello;
+
+	//message();
+
+	//message = goodbye;
+
+	//message();
+
+	//void(*func)(int, char) = starLine;
+
+	//void(*message[])() = { hello, goodbye };
+	//for (size_t i = 0; i < 2; i++)
+	//{
+	//	message[i]();
+	//}
+	
 
 	/// 19.06.2026
 
@@ -48,19 +149,19 @@ int main()
 	//cout << sizeof(pa) << endl;
 
 
-	int size;
-	cin >> size;
-	int* p = new int[size];
-	setArray(p, size);
-	printArray(p);
+	//int size;
+	//cin >> size;
+	//int* p = new int[size];
+	//setArray(p, size);
+	//printArray(p);
 
 
-	double d = 5.5;
-	double* pd = &d;
+	//double d = 5.5;
+	//double* pd = &d;
 
-	void* pv = p;
-	pv = pd;
-	*((double*)pv) = 5.6;
+	//void* pv = p;
+	//pv = pd;
+	//*((double*)pv) = 5.6;
 
 
 
@@ -69,38 +170,38 @@ int main()
 	//cout << res[0] << endl;
 
 
-	
 
-	int M_1, N_1;
 
-	cout << "M: ";
-	cin >> M_1;
-	int* A = new int[M_1];
-	setArray(A, M_1);
-	SetColor(Blue, Black);
-	cout << "A: ";
-	printArray(A, M_1);
-	SetColor(White, Black);
+	//int M_1, N_1;
 
-	cout << "N: ";
-	cin >> N_1;
-	int* B = new int[N_1];
-	setArray(B, N_1);
-	SetColor(Red, Black);
-	cout << "B: ";
-	printArray(B, N_1);
+	//cout << "M: ";
+	//cin >> M_1;
+	//int* A = new int[M_1];
+	//setArray(A, M_1);
+	//SetColor(Blue, Black);
+	//cout << "A: ";
+	//printArray(A, M_1);
+	//SetColor(White, Black);
 
-	int* C = nullptr;
-	int C_1 = 0;
+	//cout << "N: ";
+	//cin >> N_1;
+	//int* B = new int[N_1];
+	//setArray(B, N_1);
+	//SetColor(Red, Black);
+	//cout << "B: ";
+	//printArray(B, N_1);
 
-	for (size_t i = 0; i < M_1; i++)
-	{
-		if (findArray(B, N_1, A[i]) == -1 && findArray(C, C_1, A[i]) == -1)
-		{
-			addValueArray(C, C_1, A[i]);
-			findArray(B, M_1, A[i]);
-		}
-	}
+	//int* C = nullptr;
+	//int C_1 = 0;
+
+	//for (size_t i = 0; i < M_1; i++)
+	//{
+	//	if (findArray(B, N_1, A[i]) == -1 && findArray(C, C_1, A[i]) == -1)
+	//	{
+	//		addValueArray(C, C_1, A[i]);
+	//		findArray(B, M_1, A[i]);
+	//	}
+	//}
 
 	//SetColor(Green, Black);
 	//printArray(C, C_1);
