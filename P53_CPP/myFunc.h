@@ -107,7 +107,7 @@ int findArray(T arr[], int size, const T& key)
 }
 
 template<class T>
-T maxValueArray(T arr[], int size)
+T maxValueArray(T* arr, int size)
 {
 	T maxValue = arr[0];
 	for (size_t i = 0; i < size; i++)
@@ -126,7 +126,7 @@ int countValueArray(T* arr, int size, const T& key)
 	int count = 0;
 	for (size_t i = 0; i < size; i++)
 	{
-		if (arr[i]  ==  key)
+		if (arr[i] == key)
 		{
 			count++;
 		}
@@ -135,7 +135,7 @@ int countValueArray(T* arr, int size, const T& key)
 }
 
 template<class T1, class T2, class T3>
-auto Sum(T1 a, T2 b, T3 c) -> decltype(a+b)
+auto Sum(T1 a, T2 b, T3 c) -> decltype(a + b)
 {
 	return a + b + c;
 }
@@ -170,7 +170,7 @@ void addValueArray(T*& arr, int& size, T value)
 int* SumProdArray(int* arr, int size)
 {
 	int* res = new int[2] {0, 1};
-	
+
 	for (size_t i = 0; i < size; i++)
 	{
 		res[0] += arr[i];
@@ -180,10 +180,11 @@ int* SumProdArray(int* arr, int size)
 	return res;
 }
 
-void printArray(int* arr)
+template<class T>
+void printArray(T* arr)
 {
 	int block = _msize(arr);
-	int size = block / sizeof(int);
+	int size = block / sizeof(T);
 	for (size_t i = 0; i < size; i++)
 	{
 		cout << arr[i] << " ";
@@ -259,4 +260,71 @@ void(*selectWeapon(int* bullets))(int*)
 	void(*weapons[])(int*) = { pistol, gun, arrow };
 
 	return weapons[findArray(bullets, 3, maxValueArray(bullets, 3))];
+}
+
+
+template<class T>
+void createArray(T**& arr, int row, int col)
+{
+	arr = new T* [row];
+	for (size_t i = 0; i < row; i++)
+	{
+		arr[i] = new T[col];
+	}
+}
+
+template<class T>
+void setArray(T** arr, int row, int col)
+{
+	for (size_t i = 0; i < row; i++)
+	{
+		for (size_t j = 0; j < col; j++)
+		{
+			arr[i][j] = rand() % 10;
+		}
+	}
+}
+
+template<class T>
+void printArray(T** arr, int row, int col)
+{
+	for (size_t i = 0; i < row; i++)
+	{
+		for (size_t j = 0; j < col; j++)
+		{
+			cout << arr[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
+
+template<class T>
+void deleteArray(T**& arr, int row)
+{
+	for (size_t i = 0; i < row; i++)
+	{
+		delete[] arr[i];
+	}
+	delete[] arr;
+	arr = nullptr;
+}
+
+template<class T>
+void addRowArray(T**& arr, int& row, int col, T* newRow = nullptr)
+{
+	T** temp = new T* [row + 1];
+	for (size_t i = 0; i < row; i++)
+	{
+		temp[i] = arr[i];
+	}
+
+	temp[row] = new T[col];
+	for (size_t i = 0; i < col; i++)
+	{
+		temp[row][i] = (newRow != nullptr) ? newRow[i] : 0;
+	}
+
+	delete[] arr;
+	row++;
+	arr = temp;
 }

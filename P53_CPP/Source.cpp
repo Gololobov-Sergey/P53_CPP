@@ -43,14 +43,51 @@ int main()
 	srand(time(0));
 
 
+	/// 24.06.2026
+	int row, col;
+	cin >> row >> col;
+
+	int** p = nullptr;
+
+	createArray(p, row, col);
+	setArray(p, row, col);
+	printArray(p, row, col);
+
+	int* t = new int[col];
+	setArray(t, col);
+
+	addRowArray(p, row, col);
+
+	delete[] t;
+
+	cout << endl;
+	printArray(p, row, col);
+
+	deleteArray(p, row);
+
+	
+
+	// *(*(p+i) + j) = p[i][j]
+
+
+	//int a = 5;
+	//int* p1 = &a;
+	//int** p2 = &p1;
+
+	//cout << *p1 << endl;
+	//cout << p1 << endl;
+	//cout << p2 << endl;
+	//cout << *p2 << endl;
+	//cout << **p2 << endl;
+
 	/// 22.06.2026
 
-	int a, b, op;
-	int(*operation[])(int, int) = {sum};
-	cin >> a >> b;
-	cout << "1 +, 2 -, 3 *, 4 /" << endl;
-	cin >> op;
-	cout << operation[op - 1](a, b) << endl;
+	//int a, b, op;
+	//int(*operation[])(int, int) = {sum};
+	//cin >> a >> b;
+	//cout << "1 +, 2 -, 3 *, 4 /" << endl;
+	//cin >> op;
+	//cout << operation[op - 1](a, b) << endl;
 
 
 
