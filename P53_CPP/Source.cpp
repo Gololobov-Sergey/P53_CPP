@@ -42,28 +42,47 @@ int main()
 
 	srand(time(0));
 
+	/// 26.06.2026
+
+
+	//double** a;
+	//a = new double*;
+	//*a = new double(5);
+	//cout << **a << endl; // 5
+
+
+	int size;
+	cin >> size;
+	int* arr = new int[size];
+	setArray(arr, size);
+	printArray(arr);
+	int*** a = createMatrix(arr);
+
+	print(a);
+
 
 	/// 24.06.2026
-	int row, col;
-	cin >> row >> col;
+	//int row, col;
+	//cin >> row >> col;
 
-	int** p = nullptr;
+	//int** p = nullptr;
 
-	createArray(p, row, col);
-	setArray(p, row, col);
-	printArray(p, row, col);
+	//createArray(p, row, col);
+	//setArray(p, row, col);
+	//printArray(p, row, col);
 
-	int* t = new int[col];
-	setArray(t, col);
+	//int* t = new int[row];
+	//setArray(t, row);
 
-	addRowArray(p, row, col);
+	////addRowArray(p, row, col);
+	//addColsArray(p, row, col, t);
 
-	delete[] t;
+	//delete[] t;
 
-	cout << endl;
-	printArray(p, row, col);
+	//cout << endl;
+	//printArray(p, row, col);
 
-	deleteArray(p, row);
+	//deleteArray(p, row);
 
 	
 
