@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
 #include<Windows.h>
 #include<iomanip>
@@ -42,6 +43,82 @@ int main()
 
 	srand(time(0));
 
+
+	/// 29.06.2026
+
+	//char st[] = "Hello";//{ 'H', 'e', 'l', 'l', 'o', '\0'};
+	//int a[5];
+	//cout << a << endl;
+	//cout << (void*)st << endl;
+	//cout << lenStr(st) << endl;
+	//cout << lenStr("mama") << endl;
+	//cout << strlen("mama") << endl;
+
+
+	//char buffer[1024];
+	//cin.getline(buffer, 1024);
+	//int len = strlen(buffer);
+	//char* str = new char[len + 1];
+	////strcpy_s(str, len + 1, buffer);
+	//strcpy(str, buffer);
+	//cout << str << endl;
+
+
+	//cout << removeSymbol(str, 'a') << endl;
+
+
+
+	char st1[80], st2[80];
+	cout << "1: "; cin.getline(st1, 80);
+	cout << "2: "; cin.getline(st2, 80);
+
+	//strcpy(st1, st2);
+	//strncpy_s(st1, 80, st2, 3);
+
+	//strcat(st1, st2);
+	//strncat(st1, st2, 2);
+
+	//cout << strcmp(st1, st2) << endl;
+	//cout << strncmp(st1, st2, 3) << endl;
+	//cout << _stricmp(st1, st2) << endl;
+	//cout << _strnicmp(st1, st2, 3) << endl;
+
+	//char* t = strchr(st1, 'a');
+	//char* t = strrchr(st1, 'a');
+	//char* t = strstr(st1, "ma");
+	//if(t != nullptr)
+	//	cout << t << endl;
+
+	//_strset(st1, '*');
+
+	//int a = atoi(st1);
+	//long a = atol(st1);
+	//double d = atof(st1);
+	//cout << d << endl;
+
+	//_itoa(765765, st1, 36);
+
+	//cout << _strupr(st1) << endl;
+	//cout << _strlwr(st1) << endl;
+
+	//cout << isalnum('!') << endl;
+	//cout << isdigit('!') << endl;
+	//cout << isalpha('!') << endl;
+	//cout << isspace('!') << endl;
+	//cout << ispunct('!') << endl;
+	//cout << isprint('!') << endl;
+	//cout << isupper('!') << endl;
+	//cout << islower('a') << endl;
+
+
+	//cout << "1 : " << st1 << endl;
+	//cout << "2 : " << st2 << endl;
+
+
+	//cout << countWords("  jhkjh    kjh kjh kjh") << endl;
+	cout << isPalindrome("12343321") << endl;
+
+
 	/// 26.06.2026
 
 
@@ -51,14 +128,14 @@ int main()
 	//cout << **a << endl; // 5
 
 
-	int size;
-	cin >> size;
-	int* arr = new int[size];
-	setArray(arr, size);
-	printArray(arr);
-	int*** a = createMatrix(arr);
+	//int size;
+	//cin >> size;
+	//int* arr = new int[size];
+	//setArray(arr, size);
+	//printArray(arr);
+	//int*** a = createMatrix(arr);
 
-	print(a);
+	//print(a);
 
 
 	/// 24.06.2026
