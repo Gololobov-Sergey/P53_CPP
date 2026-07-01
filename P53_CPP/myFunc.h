@@ -80,7 +80,7 @@ bool desc(const T& a, const T& b)
 }
 
 template<class T>
-void bublleSort(T arr[], int size, bool(*method)(const T&, const T&) = asc)
+void bubbleSort(T* arr, int size, bool(*method)(const T&, const T&) = asc)
 {
 	for (size_t i = 0; i < size - 1; i++)
 	{
@@ -457,4 +457,72 @@ bool isPalindrome(const char* st)
 			return false;
 	}
 	return true;
+}
+
+char* deleteWord(const char* st, const char* word)
+{
+	const char* p;
+	int lenWord = strlen(word);
+	char* newStr = new char[strlen(st) + 1];
+	newStr[0] = '\0';
+	while ((p = strstr(st, word)) != nullptr)
+	{
+		strncat(newStr, st, p - st);
+		st = p + lenWord;
+	}
+	strcat(newStr, st);
+	return newStr;
+}
+
+
+char* replaceWord(const char* st, const char* _old, const char* _new)
+{
+	const char* p;
+	int lenWord = strlen(_old);
+	char* newStr = new char[8000];
+	newStr[0] = '\0';
+	while ((p = strstr(st, _old)) != nullptr)
+	{
+		strncat(newStr, st, p - st);
+		strcat(newStr, _new);
+		st = p + lenWord;
+	}
+	strcat(newStr, st);
+
+	char* temp = new char[strlen(newStr) + 1];
+	strcpy(temp, newStr);
+	delete newStr;
+
+	return temp;
+}
+
+void hello()
+{
+	cout << "Hello" << endl;
+}
+
+void goodbye()
+{
+	cout << "Goodbye" << endl;
+}
+
+void mult10(int& a)
+{
+	a *= 10;
+}
+
+void print(int& a)
+{
+	cout << a << " ";
+}
+
+int sum(int a, int b)
+{
+	return a + b;
+}
+
+
+bool compareString(char* const& s1, char* const& s2)
+{
+	return strcmp(s1, s2) > 0;
 }
