@@ -80,6 +80,12 @@ bool desc(const T& a, const T& b)
 }
 
 template<class T>
+bool equals(const T& a, const T& b)
+{
+	return a == b;
+}
+
+template<class T>
 void bubbleSort(T* arr, int size, bool(*method)(const T&, const T&) = asc)
 {
 	for (size_t i = 0; i < size - 1; i++)
@@ -93,11 +99,11 @@ void bubbleSort(T* arr, int size, bool(*method)(const T&, const T&) = asc)
 }
 
 template<class T>
-int findArray(T arr[], int size, const T& key)
+int findArray(T* arr, int size, const T& key, bool(*comparer)(const T&, const T&) = equals)
 {
 	for (size_t i = 0; i < size; i++)
 	{
-		if (arr[i] == key)
+		if (comparer(arr[i], key))
 		{
 			return i;
 		}

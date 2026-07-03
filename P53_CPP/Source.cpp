@@ -22,26 +22,56 @@ int main()
 
 	srand(time(0));
 
+	/// 03.07.2026
+
+
+	//Point p;
+	//p.print();
+
+
+	//Car car;
+	//car.beep();
+	//car.move();
+
+
+	//PhoneBook book;
+	//book.menu();
+
+
+	cout << sizeof(Foo) << endl;
+
+
+
+	//int a;
+	//cin >> a;
+	////cin.get();
+	//cin.ignore();
+	//char name[50];
+	//cin.getline(name, 50);
+
+	//cout << a << endl;
+	//cout << name << endl;
+
 
 	/// 01.07.2026
 
-	Point p;
-	p.name = 'A';
-	p.x = 10;
-	p.y = 12;
+	//Point p;
+	//p.name = 'A';
+	//p.x = 10;
+	//p.y = 12;
 
-	Point p1 = { 'B', 13, 5 };
+	//Point p1 = { 'B', 13, 5 };
 
-	Point p2[4];
+	//Point p2[4];
 
-	printPoint(p);
-	printPoint(p1);
-	
-	Human h = { new char[] {"Vasya"}, {10, 2, 2000} };
-	h.bd.day = 10;
+	//printPoint(p);
+	//printPoint(p1);
+	//
+	//Human h = { new char[] {"Vasya"}, {10, 2, 2000} };
+	//h.bd.day = 10;
 
-	Point* p3 = new Point;
-	p3->x = 55;
+	//Point* p3 = new Point;
+	//p3->x = 55;
 
 
 
