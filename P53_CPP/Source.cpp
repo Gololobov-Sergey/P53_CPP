@@ -4,6 +4,8 @@
 #include<iomanip>
 #include<conio.h>
 
+#include<fstream>
+
 #include"myFunc.h"
 #include"myStruct.h"
 
@@ -22,8 +24,98 @@ int main()
 
 	srand(time(0));
 
-	/// 03.07.2026
 
+	/// 04.09.2026
+
+
+	//ofstream fout;
+	//fout.open("file1.txt");
+	//fout << "Hello C++" << endl;
+	//fout.close();
+
+
+	//ifstream fin;
+	//fin.open("file11.txt");
+	//char buffer[80];
+	//if (fin.is_open())
+	//{
+	//	//fin >> buffer;
+	//	fin.getline(buffer, 80);
+	//	cout << buffer << endl;
+	//}
+	//else
+	//{
+	//	cout << "File not found!" << endl;
+	//}
+	//fin.close();
+
+
+	//int arr[] = { 1,12,2,34,5,56,67,7,8, 1 };
+	//ofstream out("file.txt");
+	//for (size_t i = 0; i < 10; i++)
+	//{
+	//	out << arr[i] << " ";
+	//}
+
+
+	//int* arr = nullptr;
+	//int size = 0;
+	//ifstream in("file.txt");
+
+	//int a;
+	//while(in >> a)
+	//{
+	//	addValueArray(arr, size, a);
+	//}
+
+	//printArray(arr, size);
+
+
+	//fstream out("points.txt");
+	//Point p[5];
+	//out << 5 << endl;
+	//for (size_t i = 0; i < 5; i++)
+	//{
+	//	p[i].x = rand() % 10;
+	//	p[i].y = rand() % 10;
+	//	p[i].name = 'A' + i;
+
+	//	p[i].print();
+
+	//	out << p[i].name << " " << p[i].x << " " << p[i].y << endl;
+	//}
+
+	//Point* arr = nullptr;
+	//int size = 0;
+	//ifstream in("points.txt");
+
+	//Point a;
+	//while(in >> a.name >> a.x >> a.y)
+	//{
+	//	addValueArray(arr, size, a);
+	//}
+
+
+	//int size;
+	//ifstream in("points.txt");
+	//in >> size;
+
+	//Point* p = new Point[size];
+	//for (size_t i = 0; i < size; i++)
+	//{
+	//	in >> p[i].name;
+	//	in >> p[i].x;
+	//	in >> p[i].y;
+	//}
+
+
+	//for (size_t i = 0; i < size; i++)
+	//{
+	//	p[i].print();
+	//}
+
+
+	/// 03.07.2026
 
 	//Point p;
 	//p.print();
@@ -38,7 +130,7 @@ int main()
 	//book.menu();
 
 
-	cout << sizeof(Foo) << endl;
+	//cout << sizeof(Foo) << endl;
 
 
 
