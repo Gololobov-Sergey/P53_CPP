@@ -11,7 +11,20 @@
 
 using namespace std;
 
+#define SIZE 100
 
+#define PRINT cout
+#define END_LINE endl
+
+#define FOR for (size_t i = 0; i < 10; i++)
+
+#define SQR(n) (n)*(n)
+
+#define DEBUG
+
+#define PI 3.141592
+
+#define NoFound  "Value not found"
 
 
 int main()
@@ -23,6 +36,99 @@ int main()
 	system("cls");
 
 	srand(time(0));
+
+
+	/// 07.09.2026
+	
+	//int arr[SIZE];
+
+	
+	FOR
+		PRINT << PI << END_LINE;
+
+	cout << SQR(5+1) << endl;
+
+
+#ifdef DEBUG
+	int arr[SIZE];
+#else
+	int* arr = new int[SIZE];
+#endif
+
+//#undef PI
+
+	PRINT << PI << END_LINE;
+
+
+	//int arr[] = { 132452345, 23452345, 546767, 5467567, 4575675 };
+	//ofstream out("file.bin", ios::binary);
+	//for (size_t i = 0; i < 5; i++)
+	//{
+	//	out.write((char*)&arr[i], sizeof(int));
+	//}
+
+	//int a = 4654654;
+	//ofstream out("file2.bin", ios::binary);
+	//out.write((char*)&a, 4);
+	//out.write("Hello C++", 10);
+
+
+
+	//ofstream out("points.bin");
+
+	//Point p[5];
+	//for (size_t i = 0; i < 5; i++)
+	//{
+	//	p[i].x = rand() % 10;
+	//	p[i].y = rand() % 10;
+	//	p[i].name = 'A' + i;
+
+	//	p[i].print();
+
+	//	//out << p[i].name << " " << p[i].x << " " << p[i].y << endl;
+	//	out.write((char*)&p[i], sizeof(p[i]));
+	//}
+	//out.close();
+
+
+	//Point* p = nullptr;
+	//int size = 0;
+	//ifstream in("points.bin", ios::binary);
+	//Point a;
+	//while (in.read((char*)&a, sizeof(Point)))
+	//{
+	//	addValueArray(p, size, a);
+	//	a.print();
+	//}
+
+
+	//Human h = { new char[] {"Vasya"}, 16 };
+	//ofstream out("h.bin", ios::binary);
+	//out.write((char*)&h, sizeof(Human));
+	//int len = strlen(h.name) + 1;
+	//out.write((char*)&len, sizeof(int));
+	//out.write(h.name, len);
+
+
+	//Human h1;
+	//ifstream in("h.bin", ios::binary);
+	//in.read((char*)&h1, sizeof(Human));
+	//int len;
+	//in.read((char*)&len, sizeof(int));
+	//h1.name = new char[len];
+	//in.read(h1.name, len);
+
+	//cout << h1.name << endl;
+	//cout << h1.age << endl;
+
+
+	//ifstream in("points.bin", ios::binary);
+	//int n;
+	//cin >> n;
+	//in.seekg((n - 1) * sizeof(Point));
+	//Point a;
+	//in.read((char*)&a, sizeof(Point));
+	//a.print();
 
 
 	/// 04.09.2026
@@ -172,7 +278,7 @@ int main()
 	// "C++"
 	// " C# SQL "
 
-	
+
 	//cout << replaceWord("C++ C# SQL C++ Python", "C++", "") << endl;
 	//cout << replaceWord("C++ C# SQL C++ Python", "C++", "*********") << endl;
 
@@ -317,7 +423,7 @@ int main()
 
 	//deleteArray(p, row);
 
-	
+
 
 	// *(*(p+i) + j) = p[i][j]
 
@@ -373,7 +479,7 @@ int main()
 	//	}
 	//}
 
-	 
+
 
 	//int size = 10;
 	////cin >> size;
@@ -405,7 +511,7 @@ int main()
 	//{
 	//	message[i]();
 	//}
-	
+
 
 	/// 19.06.2026
 

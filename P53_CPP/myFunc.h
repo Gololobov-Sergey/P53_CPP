@@ -21,7 +21,7 @@ void SetColor(int text, int background)
 //}
 
 
-void starLine(int size = 10, char symbol = '*')
+inline void starLine(int size = 10, char symbol = '*')
 {
 	for (size_t i = 0; i < size; i++)
 	{

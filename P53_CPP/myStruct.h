@@ -48,7 +48,7 @@ void printDate(Date d) {
 struct Human
 {
 	char* name;
-	Date bd;
+	int age;
 };
 
 

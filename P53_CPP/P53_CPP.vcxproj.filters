@@ -18,6 +18,9 @@
     <ClCompile Include="Source.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Header.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="myFunc.h">
@@ -26,5 +29,22 @@
     <ClInclude Include="myStruct.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="file.bin">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
+    <None Include="file2.bin">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
+    <None Include="points.bin">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
+    <None Include="h.bin">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
   </ItemGroup>
 </Project>
